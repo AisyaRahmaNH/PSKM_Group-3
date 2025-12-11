@@ -29,9 +29,9 @@ u_max = 0.4
 
 # Disturbance
 disturbance_enabled = False
-disturbance_interval = 5.0
-disturbance_duration = 0.4
-disturbance_magnitude = 0.8
+disturbance_interval = 2.0
+disturbance_duration = 2.0
+disturbance_magnitude = 0.2
 
 # Reduced-order Compensator
 tau = 0.05
@@ -88,7 +88,7 @@ ball_radius_vis = 0.015
 ax_anim.set_xlim(-beam_len/2 - 0.2, beam_len/2 + 0.2)
 ax_anim.set_ylim(-0.4, 0.4)
 ax_anim.set_aspect('equal')
-ax_anim.set_title("Reduced-Order Compensator")
+ax_anim.set_title("Ball and Beam System-Challenge 2 (Reduced-Order Compensator)")
 ax_anim.set_xlabel("Beam (m)")
 ax_anim.set_ylabel("Height (m)")
 
@@ -173,5 +173,6 @@ ani = animation.FuncAnimation(
 
 plt.tight_layout()
 plt.show()
+
 
 print("Final position:", x_hist[-1,0])
